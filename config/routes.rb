@@ -6,10 +6,9 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create]
   end
-  root 'posts#index'
 
   resources :hobbies
 
-  get '*not_found' => 'application#routing_error'
-  post '*not_found' => 'application#routing_error'
+  root 'posts#index'
+
 end
