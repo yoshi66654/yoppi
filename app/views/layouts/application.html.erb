@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shumitsuketa</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/15b583374d.js" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ <header>
+  <div class="header-list">
+  <h2>Anataの趣味を見つけ出し、シェアするサイト</h2>
+  <h1>ShumitsuketA～しゅみつけた～</h1>
+    <div class="header-log">
+      <ul>
+        <% if user_signed_in? %>
+        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "button" %></li>
+        <li><%= link_to "post一覧に戻る", posts_path , method: :delete, class: "button" %><li>
+        <li><%= link_to '診断へ', hobbies_path , method: :delete, class: "button" %></li>
+        <% else %>
+        <li><%= link_to "新規登録", new_user_registration_path , method: :delete, class: "button" %></li>
+        <li><%= link_to "ログイン", new_user_session_path , method: :delete, class: "button" %></li>
+        <li><%= link_to '診断へ', hobbies_path , method: :delete, class: "button" %></li>
+        <li><%= link_to "post一覧に戻る", posts_path , method: :delete, class: "button" %><li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+ </header>
+ <main>
+  <%= yield %>
+ </main>
+</body>
+ 
+</html>

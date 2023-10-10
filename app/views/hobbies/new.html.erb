@@ -1,0 +1,51 @@
+<%= form_for(@hobby, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="container-sindan">
+        <div class="row">
+            <div class="col-12">
+                <p>Question1. 体を動かすことが好きですか？？？？？</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>好きだ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>嫌いだ</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question2. 考えることが好きですか?????</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>好きだ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>嫌いだ</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question3. 趣味に使うお金はどのくらいありますか</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>ある</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>ない</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question4. 趣味に使う時間はどのくらいありますか？？？？？</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>めちゃくちゃある</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>そこそこある</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "3", nil %>ほとんどない</p>
+            </div>
+        </div>
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit "post" %>
+    </div>
+<% end %>

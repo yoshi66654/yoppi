@@ -1,0 +1,7 @@
+<%= form_for @post do |f| %>
+    <% if user_signed_in?  %>
+    <%= f.label :content %>
+    <%= f.text_field :content, :size => 140 %> 
+    <%= f.submit "編集する" %>
+<% end %>
+<% end %>

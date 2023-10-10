@@ -1,0 +1,34 @@
+<h4></h4>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_post_path %>
+<div class="posts-container">
+  <% if user_signed_in? %>
+    <%= link_to "マイページへ", user_path(current_user.id) %>
+  <% end %>
+  <% @posts.each do |t| %>
+    <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_post_path(t.id) %>
+      <%= button_to "削除する", post_path(t.id), method: :delete %>
+    <% end %> 
+    <%= link_to '投稿詳細ページへ', post_path(t.id) %>
+    <div class="post">
+      <%= t.content %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.user.email %>
+      <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %>
+      <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+          <%= button_to post_like_path(id: t.id, post_id: t.id), method: :delete do %>
+            <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= button_to post_likes_path(id: t.id, post_id: t.id), method: :post do %>
+            <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+      <% else %>
+      <i class="fas fa-heart"></i><%= t.likes.count %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
