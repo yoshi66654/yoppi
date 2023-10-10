@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :hobbies
+
+  get '*not_found' => 'application#routing_error'
+  post '*not_found' => 'application#routing_error'
 end
