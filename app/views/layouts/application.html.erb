@@ -20,13 +20,13 @@
       <ul>
         <% if user_signed_in? %>
         <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "button" %></li>
-        <li><%= link_to "post一覧に戻る", posts_path , method: :delete, class: "button" %><li>
-        <li><%= link_to '診断へ', hobbies_path , method: :delete, class: "button" %></li>
+        <li><%= link_to "post一覧に戻る", posts_path ,  class: "button" %><li>
+        <li><%= link_to '診断へ', hobbies_path ,  class: "button" %></li>
         <% else %>
-        <li><%= link_to "新規登録", new_user_registration_path , method: :delete, class: "button" %></li>
-        <li><%= link_to "ログイン", new_user_session_path , method: :delete, class: "button" %></li>
-        <li><%= link_to '診断へ', hobbies_path , method: :delete, class: "button" %></li>
-        <li><%= link_to "post一覧に戻る", posts_path , method: :delete, class: "button" %><li>
+        <li><%= link_to "新規登録", new_user_registration_path , class: "button" %></li>
+        <li><%= link_to "ログイン", new_user_session_path , class: "button" %></li>
+        <li><%= link_to '診断へ', hobbies_path , class: "button" %></li>
+        <li><%= link_to "post一覧に戻る", posts_path , class: "button" %><li>
         <% end %>
       </ul>
     </div>
