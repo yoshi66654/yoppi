@@ -1,16 +1,16 @@
 <h4></h4>
-<h3>一覧ページ</h3>
-<%= link_to "新規投稿へ", new_post_path %>
+<div class="posts-ichiran">
+  <h3>みんなの投稿一覧ページ</h3>
+</div>
+
 <div class="posts-container">
-  <% if user_signed_in? %>
-    <%= link_to "マイページへ", user_path(current_user.id) %>
-  <% end %>
+
   <% @posts.each do |t| %>
     <% if user_signed_in? && current_user.id == t.user_id %>
-      <%= link_to "編集する", edit_post_path(t.id) %>
-      <%= button_to "削除する", post_path(t.id), method: :delete %>
+      <%= link_to "編集する", edit_post_path(t.id) , class: "button"%>
+      <%= button_to "削除する", post_path(t.id), method: :delete , class: "mzk-button"%>
     <% end %> 
-    <%= link_to '投稿詳細ページへ', post_path(t.id) %>
+    <%= link_to '投稿詳細ページへ', post_path(t.id) , class: "button"%>
     <div class="post">
       <%= t.content %>
       <%= image_tag t.image_url, size: "250x200" if t.image? %>

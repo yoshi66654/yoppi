@@ -13,40 +13,56 @@
  *= require_tree .
  *= require_self
  */
- .header-list {
-    text-align: center;
-    position: relative;
-    
-    margin: 1.5em 0;
-    padding: 70px 100px;
-    min-width: 120px;
-    max-width: 100%;
-    color: hotpink;
-    font-size: 16px;
-    background: #e0edff;
-  }
-  .header-list:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -15px;
-    border: 15px solid transparent;
-    border-top: 15px solid #e0edff;
-  }
-  
-  .header-list p {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-  }
+.header-logooo{
+  margin: 0 auto;
+  display: flex;
+}
 
-  .header-log a {
-	background-color: #ceb849;
-	border: 1px solid #ceb849;
+.header-list{
+ padding-left: 230px;
+ color: #6A1DF2;
+}
+
+header {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  width: 100vw;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #e0edff;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.header-log a {
+	background-color: white;
+	border: 1px solid #27acd9;
 	border-radius: 35px;
 }
 
+.header-log input[type="submit"] {
+	background-color: white;
+	border: 1px solid #27acd9;
+	border-radius: 35px;
+}
 
 ul{
   padding-left:0;
@@ -60,11 +76,60 @@ li{
   list-style:none;
 }
 
-.button{
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  background-color: #ceb849;
-	border: 1px solid #ceb849;
-	border-radius: 35px;
+
+.button {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 30px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+	transition: 0.5s;
+}
+
+.p-button {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 30px;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+	transition: 0.5s;
+}
+
+.p-button:hover input[type="submit"]{
+  color:  #27acd9;
+	background: white;
+}
+
+.button input{
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: 0px;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+	transition: 0.5s;
+}
+
+.button:hover,
+.button:hover input[type="submit"] {
+	color: white;
+	background: #27acd9;
+}
+
+.header-logo{
+  display: flex;
 }

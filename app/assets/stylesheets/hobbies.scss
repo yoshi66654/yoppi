@@ -1,11 +1,57 @@
 // Place all the styles related to the hobbies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.start {
-    text-decoration: none;
-  background-color: transparent;
-  border: none;
-  background-color: #ceb849;
-	border: 1px solid #ceb849;
-	border-radius: 35px;
+
+
+
+.headline{
+    text-align: center;
+}
+
+.start{
+    text-align: center;
+    justify-content: center;
+}
+
+.sindanbotan{
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.intoro{
+    text-align: center;
+}
+
+
+.post-re{
+    text-align: center;
+}
+
+.shumishinndannsuru{
+    margin: 0 auto;
+}
+
+.mzk-button{
+    display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+	transition: 0.5s;
+}
+
+.mzk-button:hover {
+	color: #fff;
+	background: #27acd9;
+}
+
+.container-sindan{
+    margin: 0 auto;
+    width: 450px;
 }

@@ -6,7 +6,7 @@
     padding: 10px 15px 10px 60px;
     box-sizing: border-box;
     font-style: italic;
-    background: #efefef;
+    background: #e0edff;
     color: #555;
 }
 
@@ -17,7 +17,7 @@
     left: 15px;
     content: "\f10d";
     font-family: FontAwesome;
-    color: #cfcfcf;
+    color: #6A1DF2;
     font-size: 30px;
     line-height: 1;
     font-weight: 900;
@@ -32,7 +32,12 @@
 .post cite {
     display: block;
     text-align: right;
-    color: #888888;
+    color: palevioletred;
     font-size: 0.9em;
 }
 
+.posts-ichiran{
+    text-align: center;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

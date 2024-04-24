@@ -13,24 +13,33 @@
 
   <body>
  <header>
-  <div class="header-list">
-  <h2>Anataの趣味を見つけ出し、シェアするサイト</h2>
-  <h1>ShumitsuketA～しゅみつけた～</h1>
+  <div class="header-logooo">
+      <div class="header-icon">
+        <%= link_to image_tag("shumituketa.logo.png", size:"150x150"), posts_path %>
+      </div>
+      <div class="header-list">
+        <h2>Anataの趣味を見つけ出し、シェアするサイト</h2>
+        <h1>ShumitsuketA～しゅみつけタ～</h1>
+      </div>
+  </div>
+
     <div class="header-log">
       <ul>
         <% if user_signed_in? %>
-        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "button" %></li>
-        <li><%= link_to "post一覧に戻る", posts_path ,  class: "button" %><li>
+        <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete, class: "p-button" %></li>
+        <li><%= link_to "新規投稿へ", new_post_path , class: "button"%><li>
+        <li><%= link_to "投稿一覧に戻る", posts_path ,  class: "button" %><li>
         <li><%= link_to '診断へ', hobbies_path ,  class: "button" %></li>
+        <li><%= link_to "マイページへ", user_path(current_user.id) , class: "button"%></li>
         <% else %>
         <li><%= link_to "新規登録", new_user_registration_path , class: "button" %></li>
+        <li><%= link_to "新規投稿へ", new_post_path , class: "button"%></i>
         <li><%= link_to "ログイン", new_user_session_path , class: "button" %></li>
         <li><%= link_to '診断へ', hobbies_path , class: "button" %></li>
-        <li><%= link_to "post一覧に戻る", posts_path , class: "button" %><li>
+        <li><%= link_to "投稿一覧に戻る", posts_path , class: "button" %><li>
         <% end %>
       </ul>
     </div>
-  </div>
  </header>
  <main>
   <%= yield %>
